@@ -37,3 +37,17 @@
 
 // JSON best practices ends
 
+//imp:
+//  http throttle
+// throttle is a function that limits the number of times a function can be called over time
+// throttle is used to limit the number of times a function can be called over time
+
+// response status that have to manage
+// 1. 200 - OK
+// 2. 201 - Created
+// 3. 204 - No Content -the request has been successfully processed, but is not returning any content
+// 4. 400 - Bad Request - the request could not be understood by the server due to malformed syntax
+// 5. 401 - Unauthorized
+// 6. 403 - Forbidden- the request was a valid request, but the server is refusing to respond to it
+// 7. 404 - Not Found
+
