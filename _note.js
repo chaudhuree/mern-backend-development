@@ -96,8 +96,16 @@ const e = require("express");
 
 
 // API Response Best Practices
+// response header
 // - Use HTTP status codes to indicate API status and errors
 // - proper content type defined in the response header
 //- cache status should be provided
 // -authentication and authorization should be provided in the response header in string format
+
+// response body
+
+// - avoid providing status code ,message and error in the response body
+//- use JSON format for response body
+//- for single result ,can use boolean, string directly .ex: file uploaded. profile updated
+
 
