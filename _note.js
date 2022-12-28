@@ -6,6 +6,8 @@
 //   - underscore for space, \b for backspace, \t for tab, \n for new line, \f for form feed, \r for carriage return, \v for vertical tab
 // e. use root level array for multiple objects
 
+const e = require("express");
+
 // example: //ref: here menu and subMenu are root level arrays
 // {
 //   "menu": [
@@ -50,4 +52,52 @@
 // 5. 401 - Unauthorized
 // 6. 403 - Forbidden- the request was a valid request, but the server is refusing to respond to it
 // 7. 404 - Not Found
+
+// docs: 
+// a.
+// api end naming best practice
+// URIs resources should be nouns, not verbs
+// examples: /users/{id} instead of /getUsers/{id}
+
+// b.
+// forward slash (/) should be used to separate resources and sub-resources
+// example: /users/{id}/orders clearly falls under the /users/{id} resource which falls under the /users resource
+
+// c. 
+// punctuation for lists:
+// example: /users/{id1}, {id2} to access multiple users
+
+// d.
+// query parameters where necessary:
+// example: /users?name=sohan&age=27
+// here age is received as string
+// so before using it must convert it into number
+
+// e.
+// lowercase letters and dashes
+
+// example:
+// users/{id}/Pending-Orders is wrong
+// users/{id}/pending-orders is correct
+
+// f.
+// do not use file extensions
+// difine it in file type in code
+
+// example:
+// users/{id}.json is wrong
+// users/{id} is correct
+
+// g.no trailing slashes
+// example:
+// users/{id}/ is wrong
+// users/{id} is correct
+
+
+
+// API Response Best Practices
+// - Use HTTP status codes to indicate API status and errors
+// - proper content type defined in the response header
+//- cache status should be provided
+// -authentication and authorization should be provided in the response header in string format
 
